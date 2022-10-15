@@ -1,37 +1,31 @@
 import axios from "axios";
 import {
-    GET_USER_DETAIL, REGISTER_USER, BASE_URL_USER, BASE_URL_CART, BASE_URL_PRODUCTS, GET_USER_ERROR
+    GET_USER_DETAIL, REGISTER_USER, BASE_URL_USERS, BASE_URL_CART, BASE_URL_PRODUCTS, GET_USER_ERROR
 } from "./Constants";
 
 
 export function getUserDetail() {
     return async (dispatch) => {
         try {
-            await axios.get(BASE_URL_USER)
-                .then(res => res.data)
-                .then(res => dispatch({ type: GET_USER_DETAIL, payload: res }))
-                .catch(err => dispatch({ type: GET_USER_ERROR, payload: err }))
+            let response = await axios.get(BASE_URL_USERS)
+            response = await response.data
+            dispatch({ type: GET_USER_DETAIL, payload: response })
             dispatch()
         } catch (err) {
-            console.log("ERROR in getUserData : ", err.message)
+            dispatch({ type: GET_USER_ERROR, payload: err })
         }
     }
 }
 
 
-export function registerUser(userDetail) {
+export function registerUser(email, password) {
     return async (dispatch) => {
-        await axios.post(BASE_URL_USER, userDetail)
-        dispatch({ type: REGISTER_USER })
-    }
-}
-
-
-export function getProducts(searchText) {
-    let finalQuery;
-    searchText ?
-
-    return async (dispatch) => {
-
+        try {
+            let response = await axios.post(BASE_URL_USERS, { "id": email, "password": password, "cart": [] })
+            response = await response.data
+        } catch (err) {
+            // dispatch({ type: 'REGISTER_USER_FAIL' })
+            alert("user id / email already exist")
+        }
     }
 }

@@ -3,26 +3,14 @@ import "./login.css"
 import { } from "react-icons/md";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from "yup";
-// YUP validation schema
-const validationSchema = yup.object({
-    // phoneNo: yup.string()
-    //     .required()
-    //     .matches(/^[0-9]/, "Must be only digits")
-    //     .min(10, 'Phone Num Must Be 10 Digit Long')
-    //     .max(10, 'Phone Num Must Be 10 digit Long'),
-    username: yup.string().email().required(),
-    password: yup.string().min(6).max(20).required(),
-})
-
+import { validationSchemaLogin } from "../../util/schema"
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
-
     const { register, handleSubmit, formState: { errors } } = useForm({
-        resolver: yupResolver(validationSchema)
+        resolver: yupResolver(validationSchemaLogin)
     });
-
 
     const onSubmit = (data) => {
 
@@ -31,23 +19,28 @@ const Login = () => {
     return (
         <div className='loginContainer'>
             <div className='bg-dark inputContainer'>
-                <form onSubmit={handleSubmit(onSubmit)} className='d-flex-column align-content-center justify-content-center' >
+                <form onSubmit={handleSubmit(onSubmit)} className='d-flex-column align-items-center justify-content-center' >
 
-                    <p className="text-primary text-center font-monospace" >Login</p>
-                    <input className='m-1 p-1' type="text" placeholder='Username'
+                    <p className="text-primary text-center font-monospace" >Login to Account</p>
+                    <input className='m-1 p-1 w-100' type="text" placeholder='Username'
                         {...register("username", { required: true, maxLength: 20 })}
                     />
-                    <p className='m-0 p-0 text-white'>{errors.username?.message}</p>
+                    <p className='m-1 p-1 text-white'>{errors.username?.message}</p>
 
-                    <input className='m-1 p-1' type="text" placeholder='password'
+                    <input className='m-1 p-1 w-100' type="text" placeholder='password'
                         {...register("password", { required: true, min: 6, max: 20 })}
                     />
                     <p className='text-white'>{errors.password?.message}</p>
-                    <button className='w-100 m-1 p-1' type="submit">Submit</button>
+
+                    <button className='w-100 m-1 p-1' type="submit">Login</button>
+
                     <p className=' text-center text-warning'>Not Registered?</p>
 
                 </form>
-                <button className='w-100 m-1 p-1'>Register</button>
+
+                <Link to={"signup"} style={{ color: "inherit", textDecoration: "inherit", width: "100%" }} >
+                    <button className='w-100 m-1 p-1'>Register Here</button>
+                </Link>
             </div>
         </div>
     )
