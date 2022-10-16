@@ -1,21 +1,33 @@
 {
   "users": [
     {
+      "id": "ashish@gmail.com",
+      "password": "ashishgmail",
+      "cart": []
+    },
+    {
       "id": "ashish@yahoo.com",
-      "password": "123456",
+      "password": "ashishyahoo",
+      "cart": []
+    },
+    {
+      "id": "kalyani@gmail.com",
+      "password": "kalyanigmail",
       "cart": []
     }
   ],
   "products": [
     {
       "id": 1,
-      "type": "Fridge",
+      "image": "washingMachine.jpg",
+      "type": "Washing Machine",
       "brand": "LG",
       "model": "LG 350L",
       "price": "20000"
     },
     {
       "id": 2,
+      "image": "speakerSony.jpg",
       "type": "Speaker",
       "brand": "sony",
       "model": "sr 790Z",
@@ -23,13 +35,15 @@
     },
     {
       "id": 3,
+      "image": "tvLg.jpg",
       "type": "tv",
-      "brand": "sony",
-      "model": "Bravia32",
+      "brand": "LG",
+      "model": "LG32",
       "price": "50000"
     },
     {
       "id": 4,
+      "image": "laptopAsus.jpg",
       "type": "laptop",
       "brand": "asus",
       "model": "LPX-i5-16GBD5",
@@ -37,20 +51,23 @@
     },
     {
       "id": 5,
-      "type": "mobile",
-      "brand": "oppo",
+      "image": "phoneOppo.jpg",
+      "type": "Mobile",
+      "brand": "Oppo",
       "model": "a53s",
       "price": "15000"
     },
     {
       "id": 6,
-      "type": "HDD",
-      "brand": "WD",
-      "model": "black 1 tb",
-      "price": "3000"
+      "image": "phoneApple.jpeg",
+      "type": "Mobile",
+      "brand": "Apple",
+      "model": "13 Pro",
+      "price": "110000"
     },
     {
       "id": 7,
+      "image": "ssdSamsung.jpg",
       "type": "SSD",
       "brand": "Samsung",
       "model": "980 Pro 1 gb",
@@ -58,6 +75,7 @@
     },
     {
       "id": 8,
+      "image": "ramCorsair.jpg",
       "type": "RAM",
       "brand": "Corsair",
       "model": "8GB XL d3-1600Mhz",
@@ -65,6 +83,7 @@
     },
     {
       "id": 9,
+      "image": "ramGskill.jpg",
       "type": "RAM",
       "brand": "G Skill",
       "model": "4GB XL d3-1600Mhz",
@@ -72,6 +91,7 @@
     },
     {
       "id": 10,
+      "image": "ssdWd.jpg",
       "type": "SSD",
       "brand": "WD",
       "model": "Black 1tb NVME Pci e 5.0",
