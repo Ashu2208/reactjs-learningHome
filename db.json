@@ -2,18 +2,99 @@
   "users": [
     {
       "id": "ashish@gmail.com",
-      "password": "ashishgmail",
-      "cart": []
+      "password": "ashishgmail"
+    }
+  ],
+  "cart": [
+    {
+      "userId": "ashish@gmail.com",
+      "id": 1,
+      "image": "washingMachine.jpg",
+      "type": "Washing Machine",
+      "brand": "LG",
+      "model": "LG 350L",
+      "quantity": 1,
+      "price": "20000"
     },
     {
-      "id": "ashish@yahoo.com",
-      "password": "ashishyahoo",
-      "cart": []
+      "userId": "ashish@gmail.com",
+      "id": 2,
+      "image": "speakerSony.jpg",
+      "type": "Speaker",
+      "brand": "sony",
+      "model": "sr 790Z",
+      "quantity": 1,
+      "price": "30000"
     },
     {
-      "id": "kalyani@gmail.com",
-      "password": "kalyanigmail",
-      "cart": []
+      "userId": "ashish@gmail.com",
+      "id": 3,
+      "image": "tvLg.jpg",
+      "type": "tv",
+      "brand": "LG",
+      "model": "LG32",
+      "quantity": 1,
+      "price": "50000"
+    },
+    {
+      "userId": "ashish@gmail.com",
+      "id": 5,
+      "image": "phoneOppo.jpg",
+      "type": "Mobile",
+      "brand": "Oppo",
+      "model": "a53s",
+      "quantity": 1,
+      "price": "15000"
+    },
+    {
+      "userId": "ashish@gmail.com",
+      "id": 6,
+      "image": "phoneApple.jpeg",
+      "type": "Mobile",
+      "brand": "Apple",
+      "model": "13 Pro",
+      "quantity": 1,
+      "price": "110000"
+    },
+    {
+      "userId": "ashish@gmail.com",
+      "id": 4,
+      "image": "laptopAsus.jpg",
+      "type": "laptop",
+      "brand": "asus",
+      "model": "LPX-i5-16GBD5",
+      "quantity": 1,
+      "price": "100000"
+    },
+    {
+      "userId": "ashish@gmail.com",
+      "id": 7,
+      "image": "ssdSamsung.jpg",
+      "type": "SSD",
+      "brand": "Samsung",
+      "model": "980 Pro 1 gb",
+      "quantity": 1,
+      "price": "10000"
+    },
+    {
+      "userId": "ashish@gmail.com",
+      "id": 8,
+      "image": "ramCorsair.jpg",
+      "type": "RAM",
+      "brand": "Corsair",
+      "model": "8GB XL d3-1600Mhz",
+      "quantity": 1,
+      "price": "3000"
+    },
+    {
+      "userId": "ashish@gmail.com",
+      "id": 9,
+      "image": "ramGskill.jpg",
+      "type": "RAM",
+      "brand": "G Skill",
+      "model": "4GB XL d3-1600Mhz",
+      "quantity": 1,
+      "price": "2000"
     }
   ],
   "products": [

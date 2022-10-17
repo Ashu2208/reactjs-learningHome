@@ -15,7 +15,6 @@ const Login = () => {
     });
 
     const onSubmit = (data) => {
-        console.log(data.username, data.password)
         dispatch(getUserDetail(data.username, data.password))
     }
 
